@@ -28,7 +28,7 @@ TRUECAPTCHA_APIKEY = os.environ["TRUECAPTCHA_APIKEY"]
 
 # Mailparser 配置
 MAILPARSER_DOWNLOAD_URL_ID = os.environ["MAILPARSER_DOWNLOAD_URL_ID"] # 填写Mailparser的下载URL_ID
-MAILPARSER_DOWNLOAD_BASE_URL = os.environ["MAILPARSER_DOWNLOAD_BASE_URL"] # 无需更改除非你要反代
+MAILPARSER_DOWNLOAD_BASE_URL = "https://files.mailparser.io/d/" # 无需更改除非你要反代
 
 # Telegram Bot 推送配置
 TG_BOT_TOKEN = os.environ["TG_BOT_TOKEN"]
