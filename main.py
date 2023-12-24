@@ -17,8 +17,8 @@ import requests
 from bs4 import BeautifulSoup
 
 # 账户信息：用户名和密码
-USERNAME = os.environ["USERNAME"]  # 填写用户名或邮箱
-PASSWORD = os.environ["PASSWORD"]  # 填写密码
+USERNAME = os.environ["EUSERV_USERNAME"]  # 填写用户名或邮箱
+PASSWORD = os.environ["EUSERV_PASSWORD"]  # 填写密码
 
 # TrueCaptcha API 配置
 # 申请地址: https://truecaptcha.org/
