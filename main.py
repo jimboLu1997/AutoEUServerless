@@ -33,8 +33,7 @@ MAILPARSER_DOWNLOAD_BASE_URL = "https://files.mailparser.io/d/" # 无需更改�
 # Telegram Bot 推送配置
 TG_BOT_TOKEN = os.environ["TG_BOT_TOKEN"]
 TG_USER_ID = os.environ["TG_USER_ID"]
-TG_API_HOST = os.environ["TG_API_HOST"]
-
+TG_API_HOST = "https://api.telegram.org"
 # 代理设置（如果需要）
 PROXIES = {"http": "http://127.0.0.1:10808", "https": "http://127.0.0.1:10808"}
 
