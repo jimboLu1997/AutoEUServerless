@@ -8,7 +8,7 @@ euserv 自动续期脚本
 * 增加登录失败重试机制
 * 日志信息格式化
 """
-
+import os
 import re
 import json
 import time
@@ -17,23 +17,23 @@ import requests
 from bs4 import BeautifulSoup
 
 # 账户信息：用户名和密码
-USERNAME = '改为你的EUserV客户ID 或 邮箱'  # 填写用户名或邮箱
-PASSWORD = '改为你的EUserV的密码'  # 填写密码
+USERNAME = os.environ["USERNAME"]  # 填写用户名或邮箱
+PASSWORD = os.environ["PASSWORD"]  # 填写密码
 
 # TrueCaptcha API 配置
 # 申请地址: https://truecaptcha.org/
 
-TRUECAPTCHA_USERID = '改为你的TrueCaptcha UserID'
-TRUECAPTCHA_APIKEY = '改为你的TrueCaptcha APIKEY'
+TRUECAPTCHA_USERID = os.environ["TRUECAPTCHA_USERID"]
+TRUECAPTCHA_APIKEY = os.environ["TRUECAPTCHA_APIKEY"]
 
 # Mailparser 配置
-MAILPARSER_DOWNLOAD_URL_ID = '改为你的Mailparser下载URL的最后几位' # 填写Mailparser的下载URL_ID
-MAILPARSER_DOWNLOAD_BASE_URL = "https://files.mailparser.io/d/" # 无需更改除非你要反代
+MAILPARSER_DOWNLOAD_URL_ID = os.environ["MAILPARSER_DOWNLOAD_URL_ID"] # 填写Mailparser的下载URL_ID
+MAILPARSER_DOWNLOAD_BASE_URL = os.environ["MAILPARSER_DOWNLOAD_BASE_URL"] # 无需更改除非你要反代
 
 # Telegram Bot 推送配置
-TG_BOT_TOKEN = "改为你的Telegram机器人Token"
-TG_USER_ID = "改为你的用户ID" # 用户机器人向你发送消息
-TG_API_HOST = "https://api.telegram.org"
+TG_BOT_TOKEN = os.environ["TG_BOT_TOKEN"]
+TG_USER_ID = os.environ["TG_USER_ID"]
+TG_API_HOST = os.environ["TG_API_HOST"]
 
 # 代理设置（如果需要）
 PROXIES = {"http": "http://127.0.0.1:10808", "https": "http://127.0.0.1:10808"}
